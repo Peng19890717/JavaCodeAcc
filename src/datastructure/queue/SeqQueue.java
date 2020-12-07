@@ -15,7 +15,8 @@ public class SeqQueue<E> {
 	/**  队列的存储结构   (@author: rico) */      
 	private Object[] queue;         
 	private int size;
-	private int maxSize;    // 最大容量
+	// 最大容量
+	private int maxSize;
 	
 	public SeqQueue(int maxSize){
 		this.maxSize = maxSize;

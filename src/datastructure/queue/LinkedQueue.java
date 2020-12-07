@@ -9,10 +9,12 @@ package datastructure.queue;
  */      
     
 public class LinkedQueue<E> {
-
-	private Node<E> head;  // 头结点
-	private Node<E> rear;   // 尾指针
-	private int size;   // 队列大小
+	// 头结点
+	private Node<E> head;
+	// 尾指针
+	private Node<E> rear;
+	// 队列大小
+	private int size;
 	
 	public LinkedQueue(){
 		head = rear = new Node<E>(null);

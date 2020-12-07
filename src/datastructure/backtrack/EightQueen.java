@@ -10,9 +10,10 @@ import java.util.Date;
  * @created 2017年5月31日 下午4:54:17
  */
 public class EightQueen {
-
-	private static final short N = 8; // 使用常量来定义，方便之后解N皇后问题
-	private static int count = 0; // 结果计数器
+	// 使用常量来定义，方便之后解N皇后问题
+	private static final short N = 8;
+	// 结果计数器
+	private static int count = 0;
 
 	public static void main(String[] args) {
 		Date begin = new Date();

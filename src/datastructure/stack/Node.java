@@ -19,9 +19,8 @@ package datastructure.stack;
 	 * @author rico
 	 * @created 2017年4月6日 下午9:56:56
 	 * @param data
-	 *            新元素数据
-	 * @param next
-	 *            新元素与链表结合节点
+	 * 新元素数
+	 * 新元素与链表结合节点
 	 */
 	public Node(T data) { 
 		this.data = data;

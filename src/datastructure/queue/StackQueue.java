@@ -10,9 +10,10 @@ import datastructure.stack.LinkedStack;
  * @created 2017年5月19日 下午10:45:11    
  */      
 public class StackQueue<E> {
-
-	private LinkedStack<E> stack1;    // 存储空间
-	private LinkedStack<E> stack2;  //临时缓冲区
+	// 存储空间
+	private LinkedStack<E> stack1;
+	//临时缓冲区
+	private LinkedStack<E> stack2;
 
 	public StackQueue() {
 		stack1 = new LinkedStack<E>();

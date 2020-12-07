@@ -48,7 +48,8 @@ public class LinkedList<E> {
 		for (int i = 0; i < index; i++) {
 			cur = cur.next;
 		}
-		Node<E> node = new Node<E>(data); // 将新元素链入链表
+		// 将新元素链入链表
+		Node<E> node = new Node<E>(data);
 		cur.next = node;
 		size++;
 		return node;
@@ -168,16 +169,23 @@ public class LinkedList<E> {
 	 * @author rico
 	 */
 	public void reverseLinkedList() {
-		Node<E> cur = head.next; // 原链表
-		Node<E> pre = null; // 反转后的链表
-
-		while (cur != null) { // 对原链表中的每个节点进行反转
-			Node<E> next = cur.next; // 记录当前节点的下一个节点
-			cur.next = pre; // 当前节点指向反转后的链表
-			pre = cur; // 更新反转后的链表
-			cur = next; // 更新当前节点
+		// 原链表
+		Node<E> cur = head.next;
+		// 反转后的链表
+		Node<E> pre = null;
+        // 对原链表中的每个节点进行反转
+		while (cur != null) {
+			// 记录当前节点的下一个节点
+			Node<E> next = cur.next;
+			// 当前节点指向反转后的链表
+			cur.next = pre;
+			// 更新反转后的链表
+			pre = cur;
+			// 更新当前节点
+			cur = next;
 		}
-		head.next = pre; // 将原链表的头结点指向反转后的链表
+		// 将原链表的头结点指向反转后的链表
+		head.next = pre;
 	}
 
 	/**
@@ -208,9 +216,14 @@ public class LinkedList<E> {
 	 * @param head
 	 */
 	public void reversePrint(Node<E> head) {
+
 		if (head.next != null) {
-			reversePrint(head.next); // 不断"递去"
-			System.out.print(head.next.data + " "); // "归来"开始打印
+			// 不断"递去"
+			System.out.println("~~"+head.data);
+			reversePrint(head.next);
+			System.out.println(head.data+"~");
+			// "归来"开始打印
+			System.out.print(head.next.data + " ");
 		}
 	}
 
@@ -241,8 +254,10 @@ public class LinkedList<E> {
 	 * @return
 	 */
 	public boolean hasLoop() {
-		Node<E> index1 = head.next; // 慢指针
-		Node<E> index2 = head.next; // 快指针
+		// 慢指针
+		Node<E> index1 = head.next;
+		// 快指针
+		Node<E> index2 = head.next;
 		while (index2 != null && index2.next != null
 				&& index2.next.next != null) {
 			index1 = index1.next;
@@ -261,7 +276,8 @@ public class LinkedList<E> {
 	 * @return
 	 */
 	public boolean deleteNodeWithoutHead(Node<E> node) {
-		if (node == null || node.next == null) { // 当指定节点为空或者为尾节点时，无法删除
+		// 当指定节点为空或者为尾节点时，无法删除
+		if (node == null || node.next == null) {
 			return false;
 		}
 
@@ -284,8 +300,10 @@ public class LinkedList<E> {
 	 * @return     
 	 */
 	public boolean isIntersect(LinkedList<E> list2) {
-		Node<E> cur1 = head.next;   // 当前链表
-		Node<E> cur2 = list2.getHead().next;  // 目标链表
+		// 当前链表
+		Node<E> cur1 = head.next;
+		// 目标链表
+		Node<E> cur2 = list2.getHead().next;
 		
 		// 两链表有一个为空，则返回 false
 		if(cur1 == null || cur2 == null){
@@ -301,8 +319,8 @@ public class LinkedList<E> {
 		while(cur2.next != null){
 			cur2 = cur2.next;
 		}
-			
-		return cur1 == cur2;  // 相交与否取决于尾节点是否相同
+		// 相交与否取决于尾节点是否相同
+		return cur1 == cur2;
 	}
 
 	/**
@@ -347,5 +365,18 @@ public class LinkedList<E> {
 	 */
 	public int size(){
 		return size;
+	}
+
+	public int factorial(int n){
+		if(n == 1){
+			//System.out.println( 1);
+			return 1;
+		} else {
+			System.out.println(n +"*" +factorial(n - 1));
+
+			return n * factorial(n - 1);
+
+		}
+
 	}
 }

@@ -22,7 +22,8 @@ public class StraightSelectSort {
 						min_index = j;
 					}
 				}
-				if(target[min_index] != target[i]){  // 导致不稳定的因素：交换
+				// 导致不稳定的因素：交换
+				if(target[min_index] != target[i]){
 					int min = target[min_index];
 					target[min_index] = target[i];
 					target[i] = min;

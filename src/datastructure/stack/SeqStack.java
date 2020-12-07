@@ -9,10 +9,12 @@ import java.util.Arrays;
  * @created 2017年4月6日 下午5:27:13    
  */      
 public class SeqStack<E> {
-	
-	private Object[] stack;    // 支撑数组
-	private int top;    // 栈顶指针
-	private int maxSize;    // 栈的最大容量
+	// 支撑数组
+	private Object[] stack;
+	// 栈顶指针
+	private int top;
+	// 栈的最大容量
+	private int maxSize;
 	
 	// 默认构造函数
 	public SeqStack(){
@@ -38,7 +40,8 @@ public class SeqStack<E> {
 			throw new Exception("栈为空...");
 		}
 		E element = (E)stack[top];
-		stack[top --] = null;    // 删除该元素
+		// 删除该元素
+		stack[top --] = null;
 		return element;
 	}
 	

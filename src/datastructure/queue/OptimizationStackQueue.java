@@ -11,9 +11,10 @@ import datastructure.stack.LinkedStack;
  * @created 2017年5月19日 下午10:45:11
  */
 public class OptimizationStackQueue<E> {
-
-	private LinkedStack<E> stack1; // 入队栈
-	private LinkedStack<E> stack2; // 出队栈
+	// 入队栈
+	private LinkedStack<E> stack1;
+	// 出队栈
+	private LinkedStack<E> stack2;
 
 	public OptimizationStackQueue() {
 
@@ -36,11 +37,16 @@ public class OptimizationStackQueue<E> {
 	 *              若为空，先将stack1中的元素全部倒回stack2，再对stack2执行弹栈操作
 	 *              否则，则直接对stack2执行弹栈操作
 	 * @author rico
+	 *
 	 * @created 2017年5月19日 下午10:48:32
+	 *
 	 * @return
 	 */
 	public E pop() {
+
+
 		if (stack2.isEmpty()) {
+
 			while (!stack1.isEmpty()) {
 				stack2.push(stack1.pop().getData());
 			}

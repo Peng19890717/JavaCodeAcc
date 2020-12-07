@@ -13,11 +13,14 @@ package datastructure.sort;
 public class StraightInsertionSort {
 	
 	public static int[] insertSort(int[] target){
-		
-		if(target != null && target.length != 1){   // 待排序数组不为空且长度大于1
-			for (int i = 1; i < target.length; i++) {  // 不断扩大有序序列，直到扩展到整个数组
-				for (int j = i; j > 0; j--) {    // 向有序序列中插入新的元素
-					if(target[j]  < target[j-1]){  // 交换
+		// 待排序数组不为空且长度大于1
+		if(target != null && target.length != 1){
+			// 不断扩大有序序列，直到扩展到整个数组
+			for (int i = 1; i < target.length; i++) {
+				// 向有序序列中插入新的元素
+				for (int j = i; j > 0; j--) {
+					// 交换
+					if(target[j]  < target[j-1]){
 						int temp = target[j];
 						target[j] = target[j-1];
 						target[j-1] = temp;

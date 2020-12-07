@@ -5,7 +5,7 @@ import datastructure.queue.LinkedQueue;
 
 public class LinkedQueueTest {
 	public static void main(String[] args) {
-		LinkedQueue<Integer> queue = new LinkedQueue<Integer>();
+		LinkedQueue<Integer> queue = new LinkedQueue<>();
 		queue.put(1);
 		queue.put(2);
 		queue.put(4);

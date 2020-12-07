@@ -11,9 +11,10 @@ import java.util.Comparator;
  * @created 2017年4月6日 下午7:52:34
  */
 public class LinkedStack<E> {
-	
-	private Node<E> top; // 栈顶元素
-	private int size; // 链式栈的大小
+	// 栈顶元素
+	private Node<E> top;
+	// 链式栈的大小
+	private int size;
 	
 	/**  最小值栈   (@author: rico) */    
 	private LinkedStack<E> min;
@@ -84,7 +85,8 @@ public class LinkedStack<E> {
 	 * @description 弹出并删除栈顶元素,使用最小值栈
 	 * @author rico       
 	 * @return
-	 * @throws Exception     
+	 * @throws Exception
+	 *
 	 */
 	public Node<E> pop(Comparator<? super E> c){
 		Node<E> temp = this.pop();

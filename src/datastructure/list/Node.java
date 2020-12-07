@@ -13,6 +13,7 @@ package datastructure.list;
 	T data;
 
 	/**
+	 *
 	 * 构造函数
 	 * 
 	 * @description 构造一个新节点

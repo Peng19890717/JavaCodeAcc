@@ -20,14 +20,18 @@ public class BinaryInsertSort {
 				int right = i - 1;
 				int mid;
 				int temp = target[i];
-				if(temp < target[right]){   // 当前值小于有序序列的最大值时，开始查找插入位置
+				// 当前值小于有序序列的最大值时，开始查找插入位置
+				if(temp < target[right]){
 					while(left <= right){
 						mid = (left + right)/2;
 						if(target[mid] < temp){
-							left = mid + 1;    // 缩小插入区间
+							// 缩小插入区间
+							left = mid + 1;
 						}else if(target[mid] > temp){
-							right = mid - 1;    // 缩小插入区间
-						}else{        // 待插入值与有序序列中的target[mid]相等，保证稳定性的处理
+							// 缩小插入区间
+							right = mid - 1;
+							// 待插入值与有序序列中的target[mid]相等，保证稳定性的处理
+						}else{
 							left = left + 1;   
 						}
 					}
