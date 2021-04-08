@@ -39,10 +39,14 @@ public class QuickSort {
 	 * @return     
 	 */
 	public static int[] quickSort(int[] target, int left, int right) {
-		if(right > left){     // 递归终止条件
-			int base_index = partition(target,left, right);  // 原序列划分后基准元素的位置
-			quickSort(target, left, base_index-1);    // 对第一个子序列快速排序，不包含基准元素！
-			quickSort(target, base_index+1, right);   // 对第二个子序列快速排序，不包含基准元素！
+		// 递归终止条件
+		if(right > left){
+			// 原序列划分后基准元素的位置
+			int base_index = partition(target,left, right);
+			// 对第一个子序列快速排序，不包含基准元素！
+			quickSort(target, left, base_index-1);
+			// 对第二个子序列快速排序，不包含基准元素！
+			quickSort(target, base_index+1, right);
 		}
 		return target;
 	}
@@ -53,17 +57,22 @@ public class QuickSort {
 	 * @author rico       
 	 * @created 2017年5月20日 下午5:10:54     
 	 * @param target  序列
+	 *
 	 * @param left 序列左端
 	 * @param right  序列右端
 	 * @return     
 	 */
 	public static int partition(int[] target, int left, int right){
+
 		
 		int base = target[left];   // 基准元素的值
 		int base_index = left;    // 基准元素最终应该在的位置
+
 		
-		for (int i = left+1; i <= right; i++) {  // 从基准元素的下一个元素开始
+		for (int i = left+1; i <= right; i++) {  // 从基
+			// 准元素的下一个元素开始
 			if(target[i] < base){       //  若其小于基准元素
+
 				base_index++;           // 若其小于基准元素,则基准元素最终位置后移；否则不用移动
 				if(base_index != i){	// 相等情况意味着i之前的元素都小于base,只需要换一次即可，不需要次次都换
 					int temp = target[base_index];
@@ -74,6 +83,8 @@ public class QuickSort {
 		}
 		
 		// 将基准元素就位
+
+
 		target[left] = target[base_index];   
 		target[base_index] = base;
 		

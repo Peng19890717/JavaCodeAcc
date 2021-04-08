@@ -13,7 +13,7 @@ public class SortTest {
 		int[] target1 = { 38, 65, 97, 76, 13, 27, 49 };
 		System.out.println("直接选择排序 ： ");
 		System.out.println("原数组 ： " + Arrays.toString(target1));
-		StraightSelectSort.selectSort(target1);
+	//	StraightSelectSort.selectSort(target1);
 		System.out.println(Arrays.toString(target1));
 
 		System.out.println("\n----------------------\n");
@@ -27,13 +27,13 @@ public class SortTest {
 		System.out.println("冒泡排序 ： ");
 		int[] target3 = { 1, 2, 3, 4, 5, 8, 7, 6 };
 		System.out.println("原数组 ： " + Arrays.toString(target3));
-		BubbleSort.bubbleSort(target3);
+		//BubbleSort.bubbleSort(target3);
 
 		System.out.println("\n----------------------\n");
 		System.out.println("优化冒泡排序 ： ");
 		int[] target4 = { 1, 2, 3, 4, 5, 8, 7, 6 };
 		System.out.println("原数组 ： " + Arrays.toString(target4));
-		BubbleSort.optimizeBubbleSort(target4);
+		//BubbleSort.optimizeBubbleSort(target4);
 
 		System.out.println("\n----------------------\n");
 		System.out.println("归并排序 ： ");

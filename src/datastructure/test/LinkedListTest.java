@@ -1,6 +1,8 @@
 package datastructure.test;
 
 
+import datastructure.list.LinkedList;
+
 import java.util.List;
 
 public class LinkedListTest {
@@ -21,7 +23,7 @@ public class LinkedListTest {
 		System.out.println("~~"+8%6);
 
 
-		/*LinkedList<String> list1 = new LinkedList<String>();
+		LinkedList<String> list1 = new LinkedList<String>();
 		list1.add("A");
 		list1.add("B");
 		list1.add("C");
@@ -87,7 +89,7 @@ public class LinkedListTest {
 		list1.deleteNodeWithoutHead(list1.getEndK(2));
 		System.out.println("打印删除特定节点后的链表：");
 		list1.print();
-*/
+
 
 
 	}

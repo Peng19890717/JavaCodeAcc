@@ -1,6 +1,8 @@
 package datastructure.sort;
 
-/**        
+import java.util.Arrays;
+
+/**
  * Title: 选择排序中的直接选择排序   
  * Description: 每次找到数组中当前排序范围中的最小值并与该范围中的第一个数字交换，同时缩小待排序数组的排序范围
  * 				时间复杂度：最好情形O(n^2)，平均情形O(n^2)，最差情形O(n^2)
@@ -28,8 +30,10 @@ public class StraightSelectSort {
 					target[min_index] = target[i];
 					target[i] = min;
 				}
+				System.out.println(Arrays.toString(target));
 			}
 		}
+
 		return target;
 	}
 }

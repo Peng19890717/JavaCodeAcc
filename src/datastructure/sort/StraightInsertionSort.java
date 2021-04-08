@@ -1,6 +1,8 @@
 package datastructure.sort;
-  
-/**        
+
+import java.util.Arrays;
+
+/**
  * Title: 插入排序中的直接插入排序 ，依赖于初始序列  
  * Description: 在有序序列中不断插入新的记录以达到扩大有序区到整个数组的目的
  * 				时间复杂度：最好情形O(n)，平均情形O(n^2)，最差情形O(n^2)
@@ -24,8 +26,11 @@ public class StraightInsertionSort {
 						int temp = target[j];
 						target[j] = target[j-1];
 						target[j-1] = temp;
+						System.out.println(Arrays.toString(target));
 					}
+
 				}
+
 			}
 		}
 		return target;

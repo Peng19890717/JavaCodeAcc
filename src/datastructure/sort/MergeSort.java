@@ -22,7 +22,8 @@ import java.util.Arrays;
 public class MergeSort {
 
 	/**     
-	 * @description 归并排序算法(递归算法)：递去分解，归来合并
+	 * @description 归并排序算法(递归算法)：递去分解，归来合并 in
+	 * t[] target5 = { 21, 25, 49, 25, 16, 8, 31, 41 };
 	 * @author rico       
 	 * @created 2017年5月20日 下午4:04:52     
 	 * @param target 待排序序列
@@ -31,14 +32,18 @@ public class MergeSort {
 	 * @return     
 	 */
 	public static int[] mergeSort(int[] target, int left, int right) {
-		
-		if(right > left){           // 递归终止条件
+		// 递归终止条件
+		if(right > left){
 			int mid = (left + right)/2;
-			mergeSort(target, left, mid);   // 归并排序第一个子序列
-			mergeSort(target, mid+1, right);   // 归并排序第二个子序列
-			return merge(target,left,mid,right);  // 合并子序列成原序列
+			// 归并排序第一个子序列
+			mergeSort(target, left, mid);
+			// 归并排序第二个子序列
+			mergeSort(target, mid+1, right);
+			// 合并子序列成原序列
+			return merge(target,left,mid,right);
 		}
 		return target;
+
 	}
 	
 	  
@@ -64,11 +69,18 @@ public class MergeSort {
 		
 		// 两个表都未检查完，两两比较
 		while(s1 <= mid && s2 <= right){
-			if(temp[s1] <= temp[s2]){   // 稳定性
+			// 稳定性
+
+
+
+			if(temp[s1] <= temp[s2]){
+
 				target[index++] = temp[s1++];
 			}else{
 				target[index++] = temp[s2++];
+
 			}
+
 		}
 		
 		//若第一个表未检查完，复制
@@ -83,3 +95,5 @@ public class MergeSort {
 		return target;
 	}
 }
+
+
